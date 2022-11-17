@@ -287,7 +287,7 @@ impl<E: Engine> ProverAssembly4WithNextStep<E> {
     ) -> Result<Proof<E, PlonkCsWidth4WithNextStepParams>, SynthesisError> {
         use crate::pairing::CurveAffine;
         use std::sync::Arc;
-
+        println!("Proving with 4 width");
         let mut transcript = if let Some(p) = transcript_init_params {
             T::new_from_params(p)
         } else {
